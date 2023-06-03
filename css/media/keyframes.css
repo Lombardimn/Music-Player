@@ -1,0 +1,52 @@
+@keyframes animateBackground {
+    0%{
+        background-position: 0 67%;
+    }
+
+    50%{
+        background-position: 100% 34%;
+    }
+
+    100%{
+        background-position: 0 67%;
+    }
+}
+
+@keyframes movementAround{
+    0%,
+    100%{
+        transform:translateY(-1rem)
+    }
+
+    50%{
+        transform:translateY(1rem)
+    }
+}
+
+@keyframes animateBorder{
+    0%{
+        border-color: #F5F5F5;
+    }
+
+    50%{
+        border-color: transparent;
+    }
+
+    100%{
+        border-color: #F5F5F5;
+    }
+}
+
+@keyframes animateIcon{
+    0%{
+        color: #F5F5F5;
+    }
+
+    50%{
+        color: black;
+    }
+
+    100%{
+        color: #F5F5F5;
+    }
+}

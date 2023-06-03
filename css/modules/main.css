@@ -1,0 +1,127 @@
+.main{
+    margin: 0;
+    min-height: 100vh;
+    background-color: #c9ced3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(249deg, #63645C, #73020C, #A69C94);
+    background-size: 600% 600%;
+    animation: animateBackground 30s ease infinite;
+}
+
+.home__section{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    margin: 3rem;
+}
+
+.home__article{
+    height: 28.125rem;
+    width: 21.875rem;
+    background-color: rgba(255, 255, 255, .25);
+    box-shadow: 0 .5rem 2rem 0 rgba(0, 0, 0, .37);
+    backdrop-filter: blur(.25rem);
+    border-radius: .625rem;
+    border: .0625rem solid rgba(255, 255, 255, .18);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__container--cover{
+    width: 16.875rem;
+    height: 16.875rem;
+    top: -3.125rem;
+    /* left: 2.5rem; */
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover__border{
+    width: 16.875rem;
+    height: 16.875rem;
+    border-radius: 1.25rem;
+    filter: blur(1px);
+    position: absolute;
+    filter: blur(1px);
+    background: url(../../img/covers/linkinPark/LinkinPark_HybridTheory.jpg);
+    box-shadow: 0 .5rem 2rem 0 rgba(0, 0, 0, .3);
+}
+
+.img__cover{
+    width: 15.625rem;
+    height: 15.625rem;
+    border-radius: 1.25rem;
+    position: absolute;
+    object-fit: cover;
+}
+
+.home__title{
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.home__artiste{
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 400;
+    margin-top: .3125rem;
+}
+
+.home__progressBar{
+    background-color: #fff;
+    border-radius: .3125rem;
+    top: 0.25rem;
+    width: 90%;
+    margin: 1.25rem;
+    height: 0.25rem;
+}
+
+.home__progress{
+    background-color: #242323;
+    border-radius: .3125rem;
+    width: 0;
+    height: 100%;
+    transition: width 0.1s linear;
+}
+
+.home__duraction{
+
+}
+
+
+.Paleta_Vibrante{
+    color: #FF4081;/*(Rosa vibrante)*/
+    color: #3F51B5; /*(Azul índigo)*/
+    color: #FFC107; /*(Amarillo anaranjado)*/
+    color: #8BC34A; /*(Verde lima)*/
+    color: #E91E63; /*(Fucsia)*/
+}
+
+.Paleta_Moderna{
+    color: #2C3E50; /*(Azul oscuro)*/
+    color: #F39C12; /*(Naranja)*/
+    color: #ECF0F1; /*(Blanco)*/
+    color: #3498DB; /*(Azul claro)*/
+    color: #E74C3C; /*(Rojo)*/
+}
+
+
+.Paleta_Serena{
+    color: #536DFE;/* (Azul)*/
+    color: #00BFA5;/* (Turquesa)*/
+    color: #F5F5F5; /*(Gris claro)*/
+    color: #FF5252; /*(Rojo suave)*/
+    color: #FFD740; /*(Amarillo dorado)*/
+}

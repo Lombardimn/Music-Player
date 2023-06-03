@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="./css/normalize/reset.css">
+    <link rel="stylesheet" href="./css/media/keyframes.css">
+    <link rel="stylesheet" href="./css/modules/index.css">
+
+    <title>LoMusic.</title>
+</head>
+<body>
+    
+    <main class="main">
+
+        <header class="header">
+            <h1 class="header__logo">LoMusic.</h1>
+            <nav class="navbar">
+                <lu class="navbar__content">
+                    <li class="navbar__li">
+                        <a href="#" class="navbar__a">List</a>
+                        <i class="fa-solid fa-list-ul"></i>
+                    </li>
+                    <li class="navbar__li">
+                        <a href="#" class="navbar__a">Favorite</a>
+                        <i class="fa-solid fa-heart"></i>
+                    </li>
+                    <li class="navbar__li">
+                        <a href="#" class="navbar__a">Share</a>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </li>
+                    <li class="navbar__li">
+                        <a href="#" class="navbar__a">Search</a>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </li>
+                    <li class="navbar__li">
+                        <a href="#" class="navbar__a">Sesion</a>
+                        <i class="fa-solid fa-user-gear"></i>
+                    </li>
+                </lu>
+            </nav>
+        </header>
+
+        <section class="home__section">
+
+            <div class="square" style="--i:0"></div>
+            <div class="square" style="--i:1"></div>
+            <div class="square" style="--i:2"></div>
+
+            <article class="home__article"> <!--container-->
+                <div class="home__container--cover"> <!--img-container-->
+                    <div class="cover__border"></div>
+                    <img src="./multimedia/img/covers/LinkinPark_HybridTheory.jpg" alt="" class="img__cover" id="img__cover">
+                </div>
+                <h2 id="home__title" class="home__title">Titulo de la Canción</h2>
+                <h3 id="home__artiste" class="home__artiste">Artista</h3>
+                <audio src="./multimedia/music/song1.mp3"></audio>
+
+                <div class="home__progressBar" id="progressBar">
+                    <div class="home__progress" id="home__avance"></div>
+                    <div class="home__duraction">
+                        <span class="currentTime" id="currentTime">0:00</span>
+                        <span class="totalTime" id="totalTime">2:00</span>
+                    </div>
+                </div>
+
+                <div class="home__controls">
+                    <div class="home__controls--b1">
+                        <i class="fa-regular fa-thumbs-down"></i>
+                        <i class="fa-regular fa-thumbs-up"></i>
+                    </div>
+                    <div class="home__controls--b2">
+                        <i class="fa-solid fa-repeat" id="repeat"></i>
+                        <i class="fa-solid fa-backward" id="prev"></i>
+                        <i class="fa-solid fa-play" id="play"></i>
+                        <i class="fa-solid fa-forward" id="next"></i>
+                        <i class="fa-solid fa-shuffle" id="cicle"></i>
+                    </div>
+                    <div class="home__controls--b3">
+                        <i class="fa-solid fa-volume-off" id="volo"></i>
+                        <input type="range" min="0" max="1" step="0.01" value="1" id="volume_slider" class="vol__input">
+                        <div class="range__slider" id="range__slider"></div>
+                        <i class="fa-solid fa-volume-high" id="volh"></i>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="info__section">
+            <article class="search__article">
+                <form id="search__container" class="search__container">
+                    <input type="text" id="search__input" placeholder="Ingresa tu búsqueda" class="search__input">
+                    <button id="clear__button" class="search__button">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <button id="search__button" class="search__button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <button id="search__button--mic" class="search__button">
+                        <i class="fa-solid fa-microphone"></i>
+                    </button>
+                </form>
+            </article>
+
+            <article id="modal__listening" class="modal__listening">
+                <span class="modal__span">listening to...</span>
+                <div class="modal__div--i"><i class="fa-solid fa-ear-listen modal__i"></i></div>
+            </article>
+
+            <article class="list__article">
+                <ul class="listing__items" id="listing__items">
+                    <li>Proximo listado de canciones</li>
+                    <li>Proximo listado de canciones</li>
+                    <li>Proximo listado de canciones</li>
+                    <li>Proximo listado de canciones</li>
+                    <li>Proximo listado de canciones</li>
+                    <li>Proximo listado de canciones</li>
+                    <li>Proximo listado de canciones</li>
+                    <li>Proximo listado de canciones</li>
+                    <li>Proximo listado de canciones</li>
+                    <li>Proximo listado de canciones</li>
+                    <li>Proximo listado de canciones</li>
+                    <li>Proximo listado de canciones</li>
+                    <li>Proximo listado de canciones</li>
+                    <li>Proximo listado de canciones</li>
+                    <li>Proximo listado de canciones</li>
+                    <li>Proximo listado de canciones</li>
+                    <li>Proximo listado de canciones</li>
+                    <li>Proximo listado de canciones</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/4716696ddc.js" crossorigin="anonymous"></script>
+    <!-- JS -->
+    <script src="./js/index.js"></script>
+    <script src="./js/actions.js"></script>
+    <script src="./js/search.js"></script>
+</body>
+</html>

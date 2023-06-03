@@ -1,0 +1,394 @@
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-image: url(../../multimedia/img/fondos/La_sima.png);
+    color: #F39C12;
+    display: flex;
+}
+
+.header{
+    width: 100%;
+    padding: 1.5rem;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    color: #F39C12;
+}
+
+.header__logo{
+    font-size: 2.5rem;
+    font-weight:bold;
+    color: #F39C12;
+    filter: drop-shadow(1px 4px 2px #2C3E50);
+}
+
+.navbar{
+    display: flex;
+    z-index: 100;
+}
+
+.navbar__content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar__li{
+    margin-left: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    filter: drop-shadow(1px 4px 2px #2C3E50);
+    cursor: pointer;
+}
+
+.navbar__a{
+    margin-right: 0.5rem;
+}
+
+.navbar__i{
+    font-size: 1rem;
+}
+
+
+/* home */
+
+.home__section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home__article{
+    height: 28.125rem;
+    width: 21.875rem;
+    margin-left: 5rem;
+    margin-top: 7rem;
+    padding: 1.25rem;
+    border-radius: .625rem;
+    border: .0625rem solid rgba(255, 255, 255, .18);
+    box-shadow: 0 .5rem 2rem 0 rgba(0, 0, 0, .37);
+    background-color: rgba(255, 255, 255, .25);
+    backdrop-filter: blur(.25rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__container--cover{
+    width: 16.875rem;
+    height: 16.875rem;
+    top: -3.125rem;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover__border{
+    width: 16.875rem;
+    height: 16.875rem;
+    border-radius: 1.25rem;
+    filter: blur(1px);
+    position: absolute;
+    background: url(../../multimedia/img/covers/LinkinPark_HybridTheory.jpg);
+    background-size: cover;
+    box-shadow: 0 .5rem 2rem 0 rgba(0, 0, 0, .3);
+}
+
+.img__cover{
+    width: 15.625rem;
+    height: 15.625rem;
+    border-radius: 1.25rem;
+    position: absolute;
+    object-fit: cover;
+}
+
+.home__title{
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    filter: drop-shadow(1px 4px 2px #2C3E50);
+}
+
+.home__artiste{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: .3125rem;
+    text-align: center;
+}
+
+.home__progressBar{
+    border-radius: .3125rem;
+    top: 0.25rem;
+    width: 90%;
+    margin: 1.25rem;
+    height: 0.25rem;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.home__progress{
+    border-radius: .3125rem;
+    width: 0%;
+    height: 100%;
+    background-color: #242323;
+    transition: width 0.1s linear;
+}
+
+.home__duraction{
+    top: -1.5625rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home__controls{
+    position: relative;
+    top: -1rem;
+    width: 17rem;
+}
+
+.home__controls--b1,
+.home__controls--b2{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+#play{
+    font-size: 2.5rem;
+}
+
+.home__controls--b3{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+#volo{
+    position: relative;
+    display: flex;    
+}
+
+.vol__input{
+    margin: 0 .5rem;
+    width: 200px;
+    height: 0.4rem;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #F39C12;
+    border-radius: .4rem;
+}
+
+.vol__input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: #2C3E50;
+    border: 2px solid #F5F5F5;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+}
+
+.range__slider{
+    max-width: 200px;
+    height: 0.4rem;
+    border-radius: .4rem;
+    background-color: #2C3E50;
+    position: absolute;
+    left: 23px;
+    pointer-events: none;
+}
+
+.home__controls i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.square{
+    position: absolute;
+    border-radius: .625rem;
+    border: .0625rem solid rgba(255, 255, 255, .18);
+    box-shadow: 0 .5rem 2rem 0 rgba(0, 0, 0, .37);
+    backdrop-filter: blur(.25rem);
+    animation: movementAround 10s linear infinite;
+    animation-delay: calc(.5s * var(--i));
+}
+
+.square:nth-child(1){
+    width: 4.625rem;
+    height: 9.375rem;
+    top: 17rem;
+    left: 1.5rem;
+    z-index: 10;
+}
+
+.square:nth-child(2){
+    width: 7rem;
+    height: 4.625rem;
+    bottom: 15.875rem;
+    left: 25.5rem;
+    z-index: 10;
+}
+
+.square:nth-child(3){
+    width: 4.625rem;
+    height: 5.625rem;
+    bottom: 2.5rem;
+    left: 8rem;
+}
+
+
+
+/* section search */
+
+.info__section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    justify-content: center;
+}
+
+.search__article{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.search__container{
+    width: 100%;
+    min-width: 35rem;
+    display: flex;
+    align-items: center;
+    border-radius: 3.75rem;
+    padding: .625rem 1.25rem;
+    backdrop-filter: blur(.25rem) saturate(180%);
+    border: .0625rem solid rgba(255, 255, 255, .18);
+    /* box-shadow: 0 .5rem 2rem 0 rgba(0, 0, 0, .37); */
+    background-color: rgba(255, 255, 255, .25);
+}
+
+.search__input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    font-size: 1rem;
+    color: #F5F5F5;
+}
+
+
+
+.search__input::placeholder{
+    color: #2C3E50;
+}
+
+.search__button{
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #2C3E50;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 .25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#clear__button{
+    background-color: transparent;
+    color: #2C3E50;
+    display: none;
+}
+
+#clear__button:hover{
+    background-color: #8d8d8d;
+}
+
+.list__article{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.listing__items{
+
+}
+
+
+/* Pop-up */
+
+.modal__listening{
+    position: absolute;
+    display: flex;
+    height: 100px;
+    width: 200px;
+    flex-direction: column;
+    align-items: center;
+    color: #F5F5F5;
+    justify-content: center;
+    background-color: #242323;
+    border-radius: .625rem;
+    border: .0625rem solid rgba(255, 255, 255, .18);
+    box-shadow: 0 .5rem 2rem 0 rgba(0, 0, 0, .37);
+    backdrop-filter: blur(.25rem);
+
+    transition: all 5s ease;
+    top: -120%;
+}
+
+.modal__listening--dinamic{
+    top: 0;
+}
+
+.modal__span{
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+}
+
+.modal__div--i{
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #F5F5F5 ;
+    background-color: #E74C3C;
+    border-radius: 50%;
+    animation: animateBorder 2s linear infinite;
+}
+
+.modal__i{
+    font-size: 2rem;
+    color: #F5F5F5;
+    animation: animateIcon 2s linear infinite;
+}
+
