@@ -1,73 +1,20 @@
-//  Variables ---->
-const image = document.getElementById('img__cover');
-const titleSong = document.getElementById('home__title');
-const artiste = document.getElementById('home__artiste');
-
-const progressBar = document.getElementById('progressBar');
-let progress = document.getElementById('home__avance');
-
-const progressTime = document.getElementById('currentTime');
-const totalTime = document.getElementById('totalTime');
-const duration = document.getElementById('home__duraction')
-
-const music = document.querySelector('audio');
-const prevBtn = document.getElementById('prev');
-const playBtn = document.getElementById('play');
-const nextBtn = document.getElementById('next');
-
-const coverBorder = document.querySelector('.cover__border');
-// Check if it is playing
-let isPlaying = false;
-let songIndex = 0;
-
-//volume
-const sliderCtr = document.getElementById('volume_slider');
-const avanceVol = document.getElementById('range__slider');
-const voloBtn = document.getElementById('volo');
-const volhBtn = document.getElementById('volh');
-
-//  Modelo de ejemplo de datos - cambiar por la API
-const song = [
-    {
-        name: 'song1',
-        displayName: 'In the End',
-        artista: 'Linkin Park',
-        img:'LinkinPark_HybridTheory',
-    },
-
-    {
-        name: 'song2',
-        displayName: 'Quedate - Music Sessions #52',
-        artista: 'QUEVEDO || BZRP',
-        img:'bzrquevedo',
-    },
-
-    {
-        name: 'song3',
-        displayName: 'Un finde',
-        artista: 'Ke Personajes - FMK - Big One',
-        img:'bigone',
-    },
-];
-
-
 // Functions ---->
 
-// fPlay
+// Play
 function playSong(){
     isPlaying = true;
     playBtn.setAttribute('class', 'fa-solid fa-pause');
     music.play()
 };
 
-// fPause
+// Pause
 function pauseSong(){
     isPlaying = false;
     playBtn.setAttribute('class', 'fa-solid fa-play');
     music.pause()
 };
 
-// fPrevious
+// Previous
 function prevSong(){
     songIndex--;
     if (songIndex < 0){
@@ -78,7 +25,7 @@ function prevSong(){
     playSong();
 };
 
-// fNext
+// Next
 function nextSong(){
     songIndex++;
     if (songIndex > song.length - 1){
@@ -89,7 +36,7 @@ function nextSong(){
     playSong();
 };
 
-// freading
+// Reading
 function loadSong(song){
     titleSong.textContent = song.displayName;
     artiste.textContent = song.artista;
@@ -99,7 +46,7 @@ function loadSong(song){
     coverBorder.style.backgroundSize = 'cover';
 };
 
-// fProgress and Duraction
+// Progress and Duraction
 function updateProgressBar(e){
     if (isPlaying) {
 
@@ -169,16 +116,28 @@ function restarVol(){
     customSlider();
 }
 
+// Bucle
+
+function bucle(){
+    if (repeatBucle == false){
+        bucleBtn.style.color = '#2C3E50';
+        repeatBucle = true;
+    } else{
+        bucleBtn.style.color = '#F39C12';
+        repeatBucle = false;
+    }
+}
+
 //  Events ---->
 
 // Reproduction
 playBtn.addEventListener('click', () =>(isPlaying ? pauseSong() : playSong()));
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
-
 music.addEventListener('ended', nextSong);
 music.addEventListener('timeupdate', updateProgressBar);
 progressBar.addEventListener('click', setProgressBar);
+bucleBtn.addEventListener('click', bucle);
 
 loadSong(song[songIndex]);
 

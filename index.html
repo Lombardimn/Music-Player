@@ -32,7 +32,7 @@
                         <a href="#" class="navbar__a">Share</a>
                         <i class="fa-solid fa-share-nodes"></i>
                     </li>
-                    <li class="navbar__li">
+                    <li class="navbar__li" id="navbar__search">
                         <a href="#" class="navbar__a">Search</a>
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </li>
@@ -73,11 +73,11 @@
                         <i class="fa-regular fa-thumbs-up"></i>
                     </div>
                     <div class="home__controls--b2">
-                        <i class="fa-solid fa-repeat" id="repeat"></i>
+                        <i class="fa-solid fa-repeat" id="bucle"></i>
                         <i class="fa-solid fa-backward" id="prev"></i>
                         <i class="fa-solid fa-play" id="play"></i>
                         <i class="fa-solid fa-forward" id="next"></i>
-                        <i class="fa-solid fa-shuffle" id="cicle"></i>
+                        <i class="fa-solid fa-shuffle" id="shuffle"></i>
                     </div>
                     <div class="home__controls--b3">
                         <i class="fa-solid fa-volume-off" id="volo"></i>
@@ -91,46 +91,31 @@
 
         <section class="info__section">
             <article class="search__article">
-                <form id="search__container" class="search__container">
-                    <input type="text" id="search__input" placeholder="Ingresa tu búsqueda" class="search__input">
-                    <button id="clear__button" class="search__button">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                    <button id="search__button" class="search__button">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                    <button id="search__button--mic" class="search__button">
-                        <i class="fa-solid fa-microphone"></i>
-                    </button>
-                </form>
+                <div class="search__block" id="search__block">
+                    <form id="search__container" class="search__container">
+                        <input type="text" id="search__input" placeholder="Ingresa tu búsqueda" class="search__input">
+                        <button id="clear__button" class="search__button">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <button id="search__button" class="search__button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <button id="search__button--mic" class="search__button">
+                            <i class="fa-solid fa-microphone"></i>
+                        </button>
+                    </form>
+                </div>
             </article>
 
-            <article id="modal__listening" class="modal__listening">
-                <span class="modal__span">listening to...</span>
-                <div class="modal__div--i"><i class="fa-solid fa-ear-listen modal__i"></i></div>
+            <article id="modal__article" class="modal__article">
+                <div id="modal__listening" class="modal__listening">
+                    <span class="modal__span">listening to...</span>
+                    <div class="modal__div--i"><i class="fa-solid fa-ear-listen modal__i"></i></div>
+                </div>
             </article>
 
             <article class="list__article">
-                <ul class="listing__items" id="listing__items">
-                    <li>Proximo listado de canciones</li>
-                    <li>Proximo listado de canciones</li>
-                    <li>Proximo listado de canciones</li>
-                    <li>Proximo listado de canciones</li>
-                    <li>Proximo listado de canciones</li>
-                    <li>Proximo listado de canciones</li>
-                    <li>Proximo listado de canciones</li>
-                    <li>Proximo listado de canciones</li>
-                    <li>Proximo listado de canciones</li>
-                    <li>Proximo listado de canciones</li>
-                    <li>Proximo listado de canciones</li>
-                    <li>Proximo listado de canciones</li>
-                    <li>Proximo listado de canciones</li>
-                    <li>Proximo listado de canciones</li>
-                    <li>Proximo listado de canciones</li>
-                    <li>Proximo listado de canciones</li>
-                    <li>Proximo listado de canciones</li>
-                    <li>Proximo listado de canciones</li>
-                </ul>
+                <ul id="resultList" class="resultList"></ul>
             </article>
         </section>
     </main>
@@ -138,6 +123,7 @@
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/4716696ddc.js" crossorigin="anonymous"></script>
     <!-- JS -->
+    <script src="./js/variables.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/actions.js"></script>
     <script src="./js/search.js"></script>
