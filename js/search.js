@@ -62,9 +62,19 @@ if ('webkitSpeechRecognition' in window) {
 
 // Filtrado y listado de canciones disponibles
 searchInput.addEventListener('input', function() {
-    var searchTerm = searchInput.value.toLowerCase();
+    let searchTerm = searchInput.value.toLowerCase();
 
-    var filteredArray = song.filter(function(obj) {
+    if (searchTerm === '' ) {
+        resultList.innerHTML = '';
+        return;
+    }
+
+    clearBtn.addEventListener('click', function() {
+        resultList.innerHTML = '';
+        return;
+    });
+
+    let filteredArray = song.filter(function(obj) {
         return obj.displayName.toLowerCase().includes(searchTerm);
     });
 
@@ -75,17 +85,17 @@ function renderResults(results) {
     resultList.innerHTML = '';
 
     results.forEach(function(obj) {
-        var li = document.createElement('li');
-        var div = document.createElement('div');
-        var div2 = document.createElement('div');
+        let li = document.createElement('li');
+        let div = document.createElement('div');
+        let div2 = document.createElement('div');
 
-        var nameSpan = document.createElement('span');
+        let nameSpan = document.createElement('span');
         nameSpan.textContent = obj.displayName;
         
-        var artSpan = document.createElement('span');
+        let artSpan = document.createElement('span');
         artSpan.textContent = obj.artista;
 
-        var imgList = document.createElement('img');
+        let imgList = document.createElement('img');
         imgList.src = `multimedia/img/covers/${obj.img}.jpg`
 
         div2.appendChild(nameSpan);
